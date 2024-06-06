@@ -13,9 +13,9 @@ keshava = pyttsx3.init('sapi5')
 voices = keshava.getProperty('voices')
 keshava.setProperty('voices', voices[0].id)
 
-def virinchi(audio):
+def eda mone(audio):
     keshava.say(audio)
-    print("virinchi - ", audio)
+    print("eda mone - ", audio)
     keshava.runAndWait()
 
 def mic():
@@ -40,30 +40,30 @@ def updatetime():
     hour = int(datetime.datetime.now().hour)
     ct = time.strftime("%I:%M %p")
     if hour >= 0 and hour <= 12:
-        virinchi("good morning, it's " + ct)
+        edamone("good morning, it's " + ct)
     elif hour >= 12 and hour <= 18:
-        virinchi("good afternoon, it's " + ct)
+        edamone("good afternoon, it's " + ct)
     else:
-        virinchi("good evening, it's " + ct)
+        edamone("good evening, it's " + ct)
 
 def songs():
-    virinchi("You are now in the entertainment zone. Which type of song do you prefer to listen to?")
+    edamone("You are now in the entertainment zone. Which type of song do you prefer to listen to?")
     while True:
         micin = mic()
         if "hindi" in micin:
             kit.playonyt("Hit hindi songs")
         elif "old" in micin:
-            kit.playonyt("Evergreen old songs")
+            kit.playonyt("illuminati")
         elif "english" in micin:
-            kit.playonyt("best English hit songs")
+            kit.playonyt("arjit singh hits")
         elif "punjabi" in micin:
-            kit.playonyt("best punjabi hits")
+            kit.playonyt("racegurram songs")
         else:
-            virinchi("Sorry, I am currently not developed to perform this action")
+            edamone("Sorry, I am currently not developed to perform this action")
             break
 
 def suffer():
-    virinchi("Fasten Your seat belt and tell me your browser")
+    edamone("Fasten Your seat belt and tell me your browser")
     while True:
         micin = mic()
         if "chrome" in micin:
@@ -82,9 +82,9 @@ def main():
             break
         elif "open notepad" in micin:
             npath = "C:\\Windows\\system32\\notepad.exe"
-            virinchi('opening notepad')
+            edamone('opening notepad')
             os.startfile(npath)
         # Add other functionality here
-    virinchi("Exiting main loop")
+    edamone("Exiting main loop")
 
 main ();
